@@ -1,6 +1,6 @@
 const products = [
   {
-    name: "Professional Plate set",
+    name: "Professional Steel Plate Set ",
     image: "/images/plate-set.jpg",
     description: "Plates Set that includes the following: 4x 1.25KG, 2X 2KG",
     brand: "MuscleTov",
