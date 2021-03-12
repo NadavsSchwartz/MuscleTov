@@ -1,0 +1,22 @@
+{
+    "name": "muscletov",
+    "version": "1.0.0",
+    "description": "Fitness Equipments shop",
+    "main": "server.js",
+    "scripts": {
+        "start": "node backend/server"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/NadavsSchwartz/muscletov.git"
+    },
+    "author": "Nadav",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/NadavsSchwartz/muscletov/issues"
+    },
+    "homepage": "https://github.com/NadavsSchwartz/muscletov#readme",
+    "dependencies": {
+        "express": "^4.17.1"
+    }
+}
