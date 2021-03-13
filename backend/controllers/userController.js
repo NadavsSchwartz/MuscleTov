@@ -7,7 +7,7 @@ import User from "../models/userModel.js";
 // @access  Public
 const authUser = asyncHandler(async (req, res) => {
   const { email, password } = req.body;
-  
+
   const user = await User.findOne({ email });
 
   if (user && (await user.matchPassword(password))) {
@@ -84,7 +84,6 @@ const updateUserProfile = asyncHandler(async (req, res) => {
 
   if (user) {
     user.name = req.body.name || user.name;
-    user.email = req.body.email || user.email;
     if (req.body.password) {
       user.password = req.body.password;
     }
@@ -134,7 +133,7 @@ const getUserById = asyncHandler(async (req, res) => {
   const user = await User.findById(req.params.id).select("-password");
 
   if (user) {
-    res.json(user);
+    res.json({ user: user });
   } else {
     res.status(404);
     throw new Error("User not found");
