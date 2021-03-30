@@ -25,6 +25,7 @@ const PlaceOrderScreen = ({ history }) => {
     Number(cart.taxPrice)
   ).toFixed(2);
 
+  cart.paymentMethod = JSON.parse(localStorage.getItem("paymentMethod"));
   const orderCreate = useSelector((state) => state.orderCreate);
   const { order, success, error } = orderCreate;
 
