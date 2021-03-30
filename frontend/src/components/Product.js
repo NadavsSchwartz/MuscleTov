@@ -11,6 +11,7 @@ const Product = ({ product }) => {
           src={product.image}
           variant="top"
           style={{ height: "200px", maxHeight: "210px" }}
+          fluid
         />
       </Link>
       <Card.Body>
