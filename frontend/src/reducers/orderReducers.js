@@ -20,7 +20,6 @@ import {
   ORDER_DELIVER_SUCCESS,
   ORDER_DELIVER_REQUEST,
   ORDER_DELIVER_RESET,
-  ORDER_CREATE_RESET,
 } from "../constants/orderConstants";
 
 export const orderDetailsReducer = (

@@ -18,8 +18,8 @@ import { listProductDetails } from "../action/productActions";
 
 const ProductScreen = ({ history, match }) => {
   const [qty, setQty] = useState(1);
-  const [rating, setRating] = useState(0);
-  const [comment, setComment] = useState("");
+  // const [rating, setRating] = useState(0);
+  // const [comment, setComment] = useState("");
 
   const dispatch = useDispatch();
   const productDetails = useSelector((state) => state.productDetails);

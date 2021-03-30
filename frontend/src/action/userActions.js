@@ -21,15 +21,9 @@ import {
   USER_DELETE_REQUEST,
   USER_DELETE_SUCCESS,
   USER_DELETE_FAIL,
-  USER_UPDATE_REQUEST,
-  USER_UPDATE_SUCCESS,
   USER_UPDATE_FAIL,
-  // USER_DELETE_REQUEST,
-  // USER_DELETE_SUCCESS,
-  // USER_DELETE_FAIL,
-  // USER_UPDATE_FAIL,
-  // USER_UPDATE_SUCCESS,
-  // USER_UPDATE_REQUEST,
+  USER_UPDATE_SUCCESS,
+  USER_UPDATE_REQUEST,
 } from "../constants/userConstants";
 import { ORDER_LIST_USER_RESET } from "../constants/orderConstants";
 
@@ -239,9 +233,7 @@ export const listUsers = () => async (dispatch, getState) => {
 
 export const deleteUser = (id) => async (dispatch, getState) => {
   try {
-    dispatch({
-      type: USER_DELETE_REQUEST,
-    });
+    dispatch({ type: USER_DELETE_REQUEST });
 
     const {
       userLogin: { userInfo },
