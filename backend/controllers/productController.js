@@ -21,7 +21,10 @@ const getProducts = asyncHandler(async (req, res) => {
   const products = await Product.find({ ...keyword })
     .limit(pageSize)
     .skip(pageSize * (page - 1));
-
+  if (products.length === 0) {
+    res.status(404);
+    throw new Error("no products found");
+  }
   res.json({ products, page, pages: Math.ceil(count / pageSize) });
 });
 
