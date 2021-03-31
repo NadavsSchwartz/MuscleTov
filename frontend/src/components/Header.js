@@ -19,7 +19,9 @@ const Header = () => {
       <Navbar bg="light" expand="lg" collapseOnSelect>
         <Container>
           <LinkContainer to="/">
-            <Navbar.Brand>MUSCLE-TOV</Navbar.Brand>
+            <Navbar.Brand>
+              <img src="https://i.imgur.com/1reIcQ8.png" alt="muscleTov"></img>
+            </Navbar.Brand>
           </LinkContainer>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
