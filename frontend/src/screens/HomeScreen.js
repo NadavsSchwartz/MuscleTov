@@ -36,7 +36,6 @@ const HomeScreen = ({ match }) => {
           Go Back
         </Link>
       )}
-      <h1>Products:</h1>
       {loading ? (
         <Loader />
       ) : error ? (
@@ -45,6 +44,7 @@ const HomeScreen = ({ match }) => {
         </h3>
       ) : (
         <>
+          <h1>Products:</h1>
           <Row>
             {products.map((product) => (
               <Col key={product._id} sm={12} md={6} lg={4} responsive>

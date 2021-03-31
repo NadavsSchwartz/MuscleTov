@@ -20,7 +20,13 @@ const Header = () => {
         <Container>
           <LinkContainer to="/">
             <Navbar.Brand>
-              <img src="https://i.imgur.com/1reIcQ8.png" alt="muscleTov"></img>
+              <img
+                src="https://i.imgur.com/1reIcQ8.png"
+                width="90"
+                height="90"
+                className="d-inline-block align-top"
+                alt="muscleTov"
+              ></img>
             </Navbar.Brand>
           </LinkContainer>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
