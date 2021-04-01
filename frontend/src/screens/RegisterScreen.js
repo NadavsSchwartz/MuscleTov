@@ -45,7 +45,7 @@ const RegisterScreen = ({ history, location }) => {
           <Form.Label> Name</Form.Label>
           <Form.Control
             type="name"
-            placeholder="Enter name"
+            placeholder="Enter Name"
             value={name}
             onChange={(e) => setName(e.target.value)}
             required
@@ -62,10 +62,10 @@ const RegisterScreen = ({ history, location }) => {
           ></Form.Control>
         </Form.Group>
         <Form.Group controlId="password">
-          <Form.Label> password</Form.Label>
+          <Form.Label> Password</Form.Label>
           <Form.Control
             type="password"
-            placeholder="Enter password"
+            placeholder="Enter Password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             required
