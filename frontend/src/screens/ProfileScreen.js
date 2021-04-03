@@ -118,7 +118,7 @@ const ProfileScreen = ({ location, history }) => {
           <Loader />
         ) : errorOrders ? (
           <Message variant="danger">{errorOrders}</Message>
-        ) : (
+        ) : orders.length > 0 ? (
           <Table striped bordered hover responsive className="table-sm">
             <thead>
               <tr>
@@ -131,7 +131,7 @@ const ProfileScreen = ({ location, history }) => {
               </tr>
             </thead>
             <tbody>
-              {orders.length > 0 ? orders.map((order) => (
+              {orders.map((order) => (
                 <tr key={order._id}>
                   <td>{order._id}</td>
                   <td>{order.createdAt.substring(0, 10)}</td>
@@ -158,9 +158,11 @@ const ProfileScreen = ({ location, history }) => {
                     </LinkContainer>
                   </td>
                 </tr>
-              )): <Message variant='info'>No orders yet!</Message>}
+              ))}
             </tbody>
           </Table>
+        ) : (
+          <Message variant="info">You currently have no orders.</Message>
         )}
       </Col>
     </Row>
