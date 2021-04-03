@@ -131,34 +131,41 @@ const ProfileScreen = ({ location, history }) => {
               </tr>
             </thead>
             <tbody className="align-items-center">
-              {orders.map((order) => (
-                <tr key={order._id}>
-                  <td>{order._id}</td>
-                  <td>{order.createdAt.substring(0, 10)}</td>
-                  <td>{order.totalPrice}</td>
-                  <td className="align-middle">
-                    {order.isPaid ? (
-                      order.paidAt.substring(0, 10)
-                    ) : (
-                      <i className="fas fa-times " style={{ color: "red" }}></i>
-                    )}
-                  </td>
-                  <td>
-                    {order.isDelivered ? (
-                      order.deliveredAt.substring(0, 10)
-                    ) : (
-                      <i className="fas fa-times" style={{ color: "red" }}></i>
-                    )}
-                  </td>
-                  <td>
-                    <LinkContainer to={`/order/${order._id}`}>
-                      <Button className="btn-sm" variant="info">
-                        Details
-                      </Button>
-                    </LinkContainer>
-                  </td>
-                </tr>
-              ))}
+              {orders &&
+                orders.map((order) => (
+                  <tr key={order._id}>
+                    <td>{order._id}</td>
+                    <td>{order.createdAt.substring(0, 10)}</td>
+                    <td>{order.totalPrice}</td>
+                    <td className="align-middle">
+                      {order.isPaid ? (
+                        order.paidAt.substring(0, 10)
+                      ) : (
+                        <i
+                          className="fas fa-times "
+                          style={{ color: "red" }}
+                        ></i>
+                      )}
+                    </td>
+                    <td>
+                      {order.isDelivered ? (
+                        order.deliveredAt.substring(0, 10)
+                      ) : (
+                        <i
+                          className="fas fa-times"
+                          style={{ color: "red" }}
+                        ></i>
+                      )}
+                    </td>
+                    <td>
+                      <LinkContainer to={`/order/${order._id}`}>
+                        <Button className="btn-sm" variant="info">
+                          Details
+                        </Button>
+                      </LinkContainer>
+                    </td>
+                  </tr>
+                ))}
             </tbody>
           </Table>
         )}
