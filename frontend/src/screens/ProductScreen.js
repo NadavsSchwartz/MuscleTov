@@ -80,7 +80,7 @@ const ProductScreen = ({ history, match }) => {
             <Col md={6}>
               <Image src={product.image} alt={product.name} fluid />
             </Col>
-            <Col md={3}>
+            <Col md={3} style={{ display: "flex", alignItems: "center" }}>
               <ListGroup variant="flush">
                 <ListGroupItem>
                   <h4>{product.name}</h4>
@@ -92,7 +92,9 @@ const ProductScreen = ({ history, match }) => {
                   />
                 </ListGroupItem>
                 <ListGroupItem>Price: {product.price}</ListGroupItem>
-                <ListGroupItem>Description:{product.description}</ListGroupItem>
+                <ListGroupItem>
+                  Description: {product.description}
+                </ListGroupItem>
               </ListGroup>
             </Col>
             <Col md={3}>
