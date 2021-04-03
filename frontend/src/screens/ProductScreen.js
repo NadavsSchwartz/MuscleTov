@@ -76,7 +76,7 @@ const ProductScreen = ({ history, match }) => {
       ) : (
         <>
           <Meta title={product.name} />
-          <Row>
+          <Row className="my-auto">
             <Col md={6}>
               <Image src={product.image} alt={product.name} fluid />
             </Col>
