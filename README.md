@@ -3,7 +3,7 @@
 > eCommerce platform built with the MERN stack & Redux.
 
 
-http://www.muscletov.herokuapp.com
+https://muscletov.herokuapp.com/
 
 ## Features
 
