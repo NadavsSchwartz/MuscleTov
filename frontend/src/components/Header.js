@@ -21,7 +21,7 @@ const Header = () => {
 					<LinkContainer to='/'>
 						<Navbar.Brand>
 							<img
-								src='/muscletovlogo.svg'
+								src='/MuscleTovlogo.svg'
 								width='90'
 								height='90'
 								className='d-inline-block align-top'
